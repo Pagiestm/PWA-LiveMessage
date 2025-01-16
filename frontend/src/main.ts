@@ -62,12 +62,12 @@ if (!window.location.search.includes('username')) {
       showErrorPopup("Le message ne peut pas être vide.");
       return;
     }
-    
+
     filterCommentary.filter(message).then((filteredMessage) => {
       if(filteredMessage === 'accept') {
         socket.emit('chatMessage', message);
       } else {
-        showErrorPopup("Le message a été rejeté car il contient des propos inappropriés.");
+        showErrorPopup("Le message a été rejeté car il contient des propos inappropriés ou considéré comme spam.");
       }
     });
     messageInput.value = '';
