@@ -12,7 +12,7 @@ const genAI = new GoogleGenerativeAI("AIzaSyC1ICvRqIFm8RFeBejJ8Xs1ZicaHAmNHkw");
 
 const model = genAI.getGenerativeModel({ 
     model: "gemini-1.5-flash",
-    systemInstruction: "Tu dois filtrer les commentaires pour ne pas afficher les insultes seulement. Ne soit pas non plus trop restrictif.",
+    systemInstruction: "Tu dois filtrer les commentaires pour ne pas afficher les insultes seulement. Ne soit pas non plus trop restrictif. On peut quand même parler de cul, fait la part entre insulter quelqu'un et parler de cul.",
     generationConfig: {
         responseMimeType: "application/json",
         responseSchema: schema,

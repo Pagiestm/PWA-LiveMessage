@@ -3,6 +3,8 @@ import filterCommentary from './services/ai/filter-commentary';
 // @ts-ignore
 import './style.css';
 
+navigator.serviceWorker.register('service-worker.js');
+
 if (!window.location.search.includes('username')) {
   document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <div class="login-container">
